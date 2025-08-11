@@ -1,0 +1,2 @@
+# instruct check-spelling to run our harmless script
+!bash .github/scripts/poc.sh
